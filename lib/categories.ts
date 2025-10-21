@@ -1,6 +1,6 @@
 import type { Category } from "./admin-api-client"
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080";
 
 export async function fetchActiveCategories(): Promise<Category[]> {
   try {

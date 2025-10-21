@@ -534,7 +534,7 @@ function AdminDashboard() {
                     <TableRow key={product.id}>
                       <TableCell>
                         <Image
-                          src={`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8080'}${
+                          src={`${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8080'}${
                             product.imageUrls && product.imageUrls.length > 0
                               ? product.imageUrls[product.imageUrls.length - 1]
                               : product.image || ""

@@ -419,7 +419,7 @@ export function ProductDialog({ open, onOpenChange, product }: ProductDialogProp
                         {imagePreviews.map((preview, index) => (
                           <div key={index} className="relative w-full h-32 rounded-lg overflow-hidden border">
                             {preview.startsWith("/uploads") ? (
-                              <Image src={`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8080'}${preview}`} alt={`Preview ${index + 1}`} fill className="object-cover" />
+                              <Image src={`${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8080'}${preview}`} alt={`Preview ${index + 1}`} fill className="object-cover" />
                             ) : (
                               <Image src={preview} alt={`Preview ${index + 1}`} fill className="object-cover" />
                             )}

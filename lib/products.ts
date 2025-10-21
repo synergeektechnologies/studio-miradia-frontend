@@ -1,6 +1,6 @@
 import type { Product } from "../types/product"
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8080";
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8080";
 
 function normalizeImageUrl(imagePath: string | undefined): string {
   if (!imagePath || imagePath.trim().length === 0) return "/placeholder-user.jpg";
