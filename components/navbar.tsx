@@ -199,10 +199,10 @@ export function Navbar() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                  <SheetHeader className="pb-8 px-2">
+                  <SheetHeader className="pb-3 px-5 mt-8">
                     <SheetTitle className="font-serif text-2xl">Menu</SheetTitle>
                   </SheetHeader>
-                  <div className="flex flex-col gap-2 mt-8 px-2">
+                  <div className="flex flex-col gap-2 px-2">
                     <button
                       onClick={() => {
                         setMobileMenuOpen(false)
@@ -219,13 +219,6 @@ export function Navbar() {
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       All Products
-                    </Link>
-                    <Link
-                      href="/shop?filter=limited"
-                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105 py-4 px-4 rounded-lg hover:bg-muted/50"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Limited Editions
                     </Link>
                     <Link
                       href="/about"

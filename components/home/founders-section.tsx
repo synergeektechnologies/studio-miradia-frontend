@@ -1,10 +1,15 @@
 export function FoundersSection() {
   return (
-    <section className="relative w-full">
+    <section className="relative">
+      {/* Parallax Background Image */}
       <div
-        className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[90vh] bg-cover bg-no-repeat bg-scroll md:bg-fixed"
+        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center"
         style={{
           backgroundImage: "url('/Untitled-9.jpg')",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "top",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       />
     </section>
