@@ -10,7 +10,6 @@ import { AdminProvider } from "../contexts/admin-context"
 import { Toaster } from "../components/ui/toaster"
 import { Suspense } from "react"
 import { ConditionalLayout } from "../components/conditional-layout"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Studio Miradia - Elegance in Every Thread",
@@ -30,7 +29,6 @@ export default function RootLayout({
             <CartProvider>
               <Suspense fallback={<div>Loading...</div>}>
                 <ConditionalLayout>{children}</ConditionalLayout>
-                <SpeedInsights />
                 <Toaster />
                 <Analytics />
               </Suspense>
