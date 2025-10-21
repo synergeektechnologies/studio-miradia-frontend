@@ -1,8 +1,14 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Studio Miradia",
-  description: "Terms and conditions for Studio Miradia ecommerce platform",
+  title: "Terms and Conditions - Studio Miradia",
+  description: "Read Studio Miradia's terms and conditions for using our luxury fashion platform. Learn about your rights, responsibilities, and our service policies.",
+  keywords: "Studio Miradia terms and conditions, user agreement, service terms, fashion ecommerce terms, legal terms",
+  openGraph: {
+    title: "Terms and Conditions - Studio Miradia",
+    description: "Read Studio Miradia's terms and conditions for using our luxury fashion platform. Learn about your rights, responsibilities, and our service policies.",
+    type: "website",
+  },
 }
 
 export default function TermsPage() {

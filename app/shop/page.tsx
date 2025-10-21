@@ -7,6 +7,20 @@ import { fetchProducts } from "../../lib/products"
 import { FilterSection } from "../../components/shop/filter-section"
 import { SortSection } from "../../components/shop/sort-section"
 import { ScrollToTop } from "../../components/scroll-to-top"
+import type { Metadata } from "next"
+import { StructuredData } from "../../components/structured-data"
+import { collectionPageSchema } from "../../lib/structured-data"
+
+export const metadata: Metadata = {
+  title: "Shop Studio Miradia - Luxury Fashion Collection",
+  description: "Browse our complete collection of handcrafted luxury fashion pieces. Discover butterfly-inspired designs, sustainable materials, and timeless elegance in every piece.",
+  keywords: "shop Studio Miradia, luxury fashion collection, handcrafted clothing, butterfly inspired fashion, sustainable fashion, artisanal clothing, luxury boutique",
+  openGraph: {
+    title: "Shop Studio Miradia - Luxury Fashion Collection",
+    description: "Browse our complete collection of handcrafted luxury fashion pieces. Discover butterfly-inspired designs, sustainable materials, and timeless elegance in every piece.",
+    type: "website",
+  },
+}
 
 function ShopPageContent() {
   const searchParams = useSearchParams()
@@ -95,6 +109,12 @@ function ShopPageContent() {
 
   return (
     <main className="min-h-screen bg-background">
+      <StructuredData data={collectionPageSchema(
+        categoryParam || "All Products", 
+        categoryParam 
+          ? `Discover our exclusive ${categoryParam} collection of handcrafted luxury pieces`
+          : "Discover our complete collection of handcrafted luxury pieces"
+      )} />
       {/* Header */}
       <div className="bg-background border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

@@ -1,8 +1,14 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Shipping Policy | Studio Miradia",
-  description: "Shipping and delivery policy for Studio Miradia ecommerce platform",
+  title: "Shipping & Delivery Policy - Studio Miradia",
+  description: "Learn about Studio Miradia's shipping options, delivery times, and international shipping policies. Fast, secure delivery for your luxury fashion purchases.",
+  keywords: "Studio Miradia shipping, delivery policy, shipping options, international shipping, fashion delivery, luxury shipping",
+  openGraph: {
+    title: "Shipping & Delivery Policy - Studio Miradia",
+    description: "Learn about Studio Miradia's shipping options, delivery times, and international shipping policies. Fast, secure delivery for your luxury fashion purchases.",
+    type: "website",
+  },
 }
 
 export default function ShippingPage() {

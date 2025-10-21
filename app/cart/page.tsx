@@ -6,6 +6,18 @@ import Link from "next/link"
 import { Button } from "../../components/ui/button"
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react"
 import { getProductDisplayImage } from "../../lib/utils"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Shopping Cart - Studio Miradia",
+  description: "Review your selected luxury fashion pieces in your Studio Miradia shopping cart. Secure checkout and worldwide shipping available.",
+  keywords: "Studio Miradia cart, shopping cart, luxury fashion cart, fashion checkout, shopping bag",
+  openGraph: {
+    title: "Shopping Cart - Studio Miradia",
+    description: "Review your selected luxury fashion pieces in your Studio Miradia shopping cart. Secure checkout and worldwide shipping available.",
+    type: "website",
+  },
+}
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart()

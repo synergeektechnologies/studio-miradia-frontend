@@ -1,8 +1,14 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Studio Miradia",
-  description: "Privacy policy for Studio Miradia ecommerce platform",
+  title: "Privacy Policy - Studio Miradia",
+  description: "Learn how Studio Miradia protects your personal information and privacy. Our comprehensive privacy policy covers data collection, usage, and your rights as a customer.",
+  keywords: "Studio Miradia privacy policy, data protection, privacy rights, customer privacy, fashion ecommerce privacy",
+  openGraph: {
+    title: "Privacy Policy - Studio Miradia",
+    description: "Learn how Studio Miradia protects your personal information and privacy. Our comprehensive privacy policy covers data collection, usage, and your rights as a customer.",
+    type: "website",
+  },
 }
 
 export default function PrivacyPage() {

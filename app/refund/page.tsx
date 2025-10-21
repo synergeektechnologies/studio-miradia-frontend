@@ -1,8 +1,14 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Refund Policy | Studio Miradia",
-  description: "Refund and return policy for Studio Miradia ecommerce platform",
+  title: "Refund & Return Policy - Studio Miradia",
+  description: "Studio Miradia's comprehensive refund and return policy. Learn about our 30-day return window, exchange options, and hassle-free return process for luxury fashion items.",
+  keywords: "Studio Miradia refund policy, return policy, fashion returns, luxury fashion returns, exchange policy, customer satisfaction",
+  openGraph: {
+    title: "Refund & Return Policy - Studio Miradia",
+    description: "Studio Miradia's comprehensive refund and return policy. Learn about our 30-day return window, exchange options, and hassle-free return process for luxury fashion items.",
+    type: "website",
+  },
 }
 
 export default function RefundPage() {

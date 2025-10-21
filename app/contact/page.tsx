@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import type { Metadata } from "next"
 
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
@@ -8,6 +9,20 @@ import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
 import { Textarea } from "../../components/ui/textarea"
 import { useToast } from "../../hooks/use-toast"
+import { StructuredData } from "../../components/structured-data"
+import { faqSchema } from "../../lib/structured-data"
+
+export const metadata: Metadata = {
+  title: "Contact Studio Miradia - Get in Touch",
+  description: "Contact Studio Miradia for inquiries, support, or to learn more about our luxury fashion collections. We're here to help with your fashion needs.",
+  keywords: "contact Studio Miradia, customer support, fashion inquiries, luxury fashion contact, Studio Miradia support",
+  openGraph: {
+    title: "Contact Studio Miradia - Get in Touch",
+    description: "Contact Studio Miradia for inquiries, support, or to learn more about our luxury fashion collections. We're here to help with your fashion needs.",
+    type: "website",
+  },
+}
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,6 +33,21 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
+
+  const contactFAQs = [
+    {
+      question: "How can I contact Studio Miradia?",
+      answer: "You can reach us via email at hello@studiomiradia.com, call us at +91 98765 43210, or visit our studio at 123 Fashion Street, Mumbai."
+    },
+    {
+      question: "What are your business hours?",
+      answer: "We're open Monday to Friday from 10:00 AM to 7:00 PM, and Saturday from 10:00 AM to 6:00 PM. We're closed on Sundays."
+    },
+    {
+      question: "Do you offer customer support?",
+      answer: "Yes, we provide comprehensive customer support for all your fashion needs, including sizing, styling advice, and order assistance."
+    }
+  ]
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -54,6 +84,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-background">
+      <StructuredData data={faqSchema(contactFAQs)} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="text-center mb-12">
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>

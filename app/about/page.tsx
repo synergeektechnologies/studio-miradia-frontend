@@ -1,10 +1,40 @@
 import Image from "next/image"
 import { Palette, Leaf, Heart, Sparkles } from "lucide-react"
 import { ScrollToTop } from "../../components/scroll-to-top"
+import type { Metadata } from "next"
+import { StructuredData } from "../../components/structured-data"
+import { faqSchema } from "../../lib/structured-data"
+
+export const metadata: Metadata = {
+  title: "About Studio Miradia - Our Story & Craftsmanship",
+  description: "Learn about Studio Miradia's journey of creating handcrafted luxury fashion. Discover our values, sustainable practices, and the artisans behind our butterfly-inspired designs.",
+  keywords: "about Studio Miradia, luxury fashion brand, handcrafted clothing, sustainable fashion, artisanal craftsmanship, butterfly philosophy, fashion brand story",
+  openGraph: {
+    title: "About Studio Miradia - Our Story & Craftsmanship",
+    description: "Learn about Studio Miradia's journey of creating handcrafted luxury fashion. Discover our values, sustainable practices, and the artisans behind our butterfly-inspired designs.",
+    type: "website",
+  },
+}
 
 export default function AboutPage() {
+  const faqs = [
+    {
+      question: "What makes Studio Miradia unique?",
+      answer: "Studio Miradia combines traditional Indian craftsmanship with modern design, creating butterfly-inspired luxury fashion pieces that are sustainable and timeless."
+    },
+    {
+      question: "Are your products sustainable?",
+      answer: "Yes, we use only natural fabrics and sustainable production methods, ensuring each piece is eco-friendly and ethically made."
+    },
+    {
+      question: "How are your products made?",
+      answer: "Each piece is handcrafted by skilled artisans using traditional techniques, ensuring exceptional quality and unique character in every garment."
+    }
+  ]
+
   return (
     <main className="min-h-screen bg-background">
+      <StructuredData data={faqSchema(faqs)} />
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">

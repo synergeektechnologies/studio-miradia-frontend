@@ -2,6 +2,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Mobile toast positioning with safe area support */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+}
+
 /* Studio MiraDia luxury fashion theme with beige, blush pink, mocha brown, cream, gold, and teal */
 :root {
   --background: oklch(0.98 0.02 45);

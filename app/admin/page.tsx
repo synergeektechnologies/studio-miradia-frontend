@@ -319,25 +319,7 @@ function AdminDashboard() {
 
   const unreadCount = inquiries.filter((i) => i.status === "PENDING").length
 
-  // Auto-refresh data when dialogs are closed (indicating successful operations)
-  useEffect(() => {
-    if (!productDialogOpen && !customerDialogOpen && !categoryDialogOpen) {
-      // Dialogs were closed, data might have been updated
-      console.log("Admin Dashboard: Dialogs closed, data may have been updated")
-    }
-  }, [productDialogOpen, customerDialogOpen, categoryDialogOpen])
-
-  // Auto-refresh data periodically (every 30 seconds) to catch external changes
-  useEffect(() => {
-    const interval = setInterval(() => {
-      console.log("Admin Dashboard: Auto-refreshing data...")
-      refreshData().catch(error => {
-        console.error("Auto-refresh failed:", error)
-      })
-    }, 30000) // 30 seconds
-
-    return () => clearInterval(interval)
-  }, [refreshData])
+  // No automatic refresh - data will only refresh when manually triggered or after operations
 
   if (isLoading) {
     return (
