@@ -1,4 +1,4 @@
-import { Color, CreateColor, UpdateColor } from '@/types/color';
+import { Color, CreateColor, UpdateColor } from '../types/color';
 
 // Use Next.js API routes instead of direct backend calls
 const API_BASE_URL = '/api/admin';

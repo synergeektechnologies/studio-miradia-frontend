@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
-import type { Product } from "@/types/product"
+import type { Product } from "../types/product"
 import { 
   fetchCustomers, 
   createCustomer as createCustomerAPI, 
@@ -34,7 +34,7 @@ import {
   type Order,
   type Inquiry,
   type Category
-} from "@/lib/admin-api-client"
+} from "../lib/admin-api-client"
 
 interface AdminContextType {
   products: Product[]

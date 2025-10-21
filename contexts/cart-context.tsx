@@ -2,8 +2,8 @@
 
 import type React from "react"
 import { createContext, useContext, useState, useCallback } from "react"
-import { useToast } from "@/hooks/use-toast"
-import type { Product } from "@/types/product"
+import { useToast } from "../hooks/use-toast"
+import type { Product } from "../types/product"
 
 export interface CartProduct extends Product {
   selectedColorId?: string

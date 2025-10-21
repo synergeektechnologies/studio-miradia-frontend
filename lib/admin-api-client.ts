@@ -1,4 +1,4 @@
-import type { Product } from "@/types/product"
+import type { Product } from "../types/product"
 
 // Use relative paths to call Next.js API routes
 const API_BASE_URL = "";
