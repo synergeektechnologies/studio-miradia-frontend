@@ -199,44 +199,44 @@ export function Navbar() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                  <SheetHeader className="pb-6">
+                  <SheetHeader className="pb-8 px-2">
                     <SheetTitle className="font-serif text-2xl">Menu</SheetTitle>
                   </SheetHeader>
-                  <div className="flex flex-col gap-6 mt-8">
+                  <div className="flex flex-col gap-2 mt-8 px-2">
                     <button
                       onClick={() => {
                         setMobileMenuOpen(false)
                         setSearchOpen(true)
                       }}
-                      className="text-lg font-medium hover:text-primary transition-all duration-300 text-left flex items-center gap-3 hover:scale-105"
+                      className="text-lg font-medium hover:text-primary transition-all duration-300 text-left flex items-center gap-3 hover:scale-105 py-4 px-4 rounded-lg hover:bg-muted/50"
                     >
                       <Search className="h-5 w-5" />
                       Search
                     </button>
                     <Link
                       href="/shop"
-                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105"
+                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105 py-4 px-4 rounded-lg hover:bg-muted/50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       All Products
                     </Link>
                     <Link
                       href="/shop?filter=limited"
-                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105"
+                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105 py-4 px-4 rounded-lg hover:bg-muted/50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Limited Editions
                     </Link>
                     <Link
                       href="/about"
-                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105"
+                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105 py-4 px-4 rounded-lg hover:bg-muted/50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Our World
                     </Link>
                     <Link
                       href="/contact"
-                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105"
+                      className="text-lg font-medium hover:text-primary transition-all duration-300 hover:scale-105 py-4 px-4 rounded-lg hover:bg-muted/50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Contact
