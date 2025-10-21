@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { CartProvider } from "@/contexts/cart-context"
@@ -12,12 +11,6 @@ import { Toaster } from "@/components/ui/toaster"
 import { Suspense } from "react"
 import { ConditionalLayout } from "@/components/conditional-layout"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-})
 
 export const metadata: Metadata = {
   title: "Studio Miradia - Elegance in Every Thread",
@@ -31,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${playfair.variable}`}>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <AuthProvider>
           <AdminProvider>
             <CartProvider>
