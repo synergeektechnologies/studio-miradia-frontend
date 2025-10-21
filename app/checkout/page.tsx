@@ -2,19 +2,19 @@
 
 import type React from "react"
 
-import { useCart } from "@/contexts/cart-context"
-import { useAuth } from "@/contexts/auth-context"
+import { useCart } from "../../contexts/cart-context"
+import { useAuth } from "../../contexts/auth-context"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from "../../components/ui/button"
+import { Input } from "../../components/ui/input"
+import { Label } from "../../components/ui/label"
 import { ShoppingBag } from "lucide-react"
 import { useState } from "react"
-import { useToast } from "@/hooks/use-toast"
-import { getProductDisplayImage } from "@/lib/utils"
-import { type OrderCreationRequest } from "@/lib/orders"
+import { useToast } from "../../hooks/use-toast"
+import { getProductDisplayImage } from "../../lib/utils"
+import { type OrderCreationRequest } from "../../lib/orders"
 import { 
   loadRazorpayScript, 
   createRazorpayOrder, 
@@ -22,7 +22,7 @@ import {
   openRazorpayCheckout,
   type RazorpayOrderRequest,
   type RazorpayPaymentVerificationRequest 
-} from "@/lib/razorpay"
+} from "../../lib/razorpay"
 
 export default function CheckoutPage() {
   const { cart, clearCart } = useCart()

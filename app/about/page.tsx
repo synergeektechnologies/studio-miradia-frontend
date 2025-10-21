@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Palette, Leaf, Heart, Sparkles } from "lucide-react"
-import { ScrollToTop } from "@/components/scroll-to-top"
+import { ScrollToTop } from "../../components/scroll-to-top"
 
 export default function AboutPage() {
   return (

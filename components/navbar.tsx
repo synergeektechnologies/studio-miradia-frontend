@@ -4,19 +4,19 @@ import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Menu, Search, ShoppingCart, Heart, User } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useCart } from "@/contexts/cart-context"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { useAuth } from "@/contexts/auth-context"
-import { SearchDialog } from "@/components/search-dialog"
-import { ShopMegaMenu } from "@/components/shop-mega-menu"
+import { Button } from "./ui/button"
+import { useCart } from "../contexts/cart-context"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
+import { useAuth } from "../contexts/auth-context"
+import { SearchDialog } from "./search-dialog"
+import { ShopMegaMenu } from "./shop-mega-menu"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "./ui/dropdown-menu"
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

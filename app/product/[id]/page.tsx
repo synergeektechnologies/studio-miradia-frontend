@@ -2,11 +2,11 @@
 
 import { useState, useEffect, use } from "react"
 import { notFound } from "next/navigation"
-import { getProductById, fetchProducts } from "@/lib/products"
-import { ProductDetails } from "@/components/product/product-details"
-import { RelatedProducts } from "@/components/product/related-products"
-import { ScrollToTop } from "@/components/scroll-to-top"
-import type { Product } from "@/types/product"
+import { getProductById, fetchProducts } from "../../../lib/products"
+import { ProductDetails } from "../../../components/product/product-details"
+import { RelatedProducts } from "../../../components/product/related-products"
+import { ScrollToTop } from "../../../components/scroll-to-top"
+import type { Product } from "../../../types/product"
 
 export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const [product, setProduct] = useState<Product | null>(null)

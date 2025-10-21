@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { loadRazorpayScript, openRazorpayCheckout } from "@/lib/razorpay"
-import { useToast } from "@/hooks/use-toast"
+import { Button } from "../../components/ui/button"
+import { loadRazorpayScript, openRazorpayCheckout } from "../../lib/razorpay"
+import { useToast } from "../../hooks/use-toast"
 
 export default function TestRazorpayPage() {
   const [isLoading, setIsLoading] = useState(false)

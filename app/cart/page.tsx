@@ -1,11 +1,11 @@
 "use client"
 
-import { useCart } from "@/contexts/cart-context"
+import { useCart } from "../../contexts/cart-context"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../components/ui/button"
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react"
-import { getProductDisplayImage } from "@/lib/utils"
+import { getProductDisplayImage } from "../../lib/utils"
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useCart()

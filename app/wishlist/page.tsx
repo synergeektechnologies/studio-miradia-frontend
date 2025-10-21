@@ -1,12 +1,12 @@
 "use client"
 
-import { useCart } from "@/contexts/cart-context"
-import { ProductCard } from "@/components/product-card"
+import { useCart } from "../../contexts/cart-context"
+import { ProductCard } from "../../components/product-card"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../components/ui/button"
 import { Heart, ShoppingCart, Trash2 } from "lucide-react"
 import { useState } from "react"
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "../../hooks/use-toast"
 
 export default function WishlistPage() {
   const { wishlist, addToCart, clearWishlist } = useCart()

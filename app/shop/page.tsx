@@ -2,11 +2,11 @@
 
 import { useState, useMemo, Suspense, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
-import { ProductCard } from "@/components/product-card"
-import { fetchProducts } from "@/lib/products"
-import { FilterSection } from "@/components/shop/filter-section"
-import { SortSection } from "@/components/shop/sort-section"
-import { ScrollToTop } from "@/components/scroll-to-top"
+import { ProductCard } from "../../components/product-card"
+import { fetchProducts } from "../../lib/products"
+import { FilterSection } from "../../components/shop/filter-section"
+import { SortSection } from "../../components/shop/sort-section"
+import { ScrollToTop } from "../../components/scroll-to-top"
 
 function ShopPageContent() {
   const searchParams = useSearchParams()
