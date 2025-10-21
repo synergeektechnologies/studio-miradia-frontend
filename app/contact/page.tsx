@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import type { Metadata } from "next"
 
 import { useState } from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
@@ -11,17 +10,6 @@ import { Textarea } from "../../components/ui/textarea"
 import { useToast } from "../../hooks/use-toast"
 import { StructuredData } from "../../components/structured-data"
 import { faqSchema } from "../../lib/structured-data"
-
-export const metadata: Metadata = {
-  title: "Contact Studio Miradia - Get in Touch",
-  description: "Contact Studio Miradia for inquiries, support, or to learn more about our luxury fashion collections. We're here to help with your fashion needs.",
-  keywords: "contact Studio Miradia, customer support, fashion inquiries, luxury fashion contact, Studio Miradia support",
-  openGraph: {
-    title: "Contact Studio Miradia - Get in Touch",
-    description: "Contact Studio Miradia for inquiries, support, or to learn more about our luxury fashion collections. We're here to help with your fashion needs.",
-    type: "website",
-  },
-}
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

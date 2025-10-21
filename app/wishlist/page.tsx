@@ -7,18 +7,6 @@ import { Button } from "../../components/ui/button"
 import { Heart, ShoppingCart, Trash2 } from "lucide-react"
 import { useState } from "react"
 import { useToast } from "../../hooks/use-toast"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "My Wishlist - Studio Miradia",
-  description: "Save your favorite luxury fashion pieces in your Studio Miradia wishlist. Create your perfect collection and never miss out on your dream items.",
-  keywords: "Studio Miradia wishlist, saved items, favorite fashion pieces, luxury wishlist, fashion favorites",
-  openGraph: {
-    title: "My Wishlist - Studio Miradia",
-    description: "Save your favorite luxury fashion pieces in your Studio Miradia wishlist. Create your perfect collection and never miss out on your dream items.",
-    type: "website",
-  },
-}
 
 export default function WishlistPage() {
   const { wishlist, addToCart, clearWishlist } = useCart()

@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import type { Metadata } from "next"
 
 import { useCart } from "../../contexts/cart-context"
 import { useAuth } from "../../contexts/auth-context"
@@ -25,16 +24,6 @@ import {
   type RazorpayPaymentVerificationRequest 
 } from "../../lib/razorpay"
 
-export const metadata: Metadata = {
-  title: "Checkout - Studio Miradia",
-  description: "Complete your luxury fashion purchase with secure checkout. Fast shipping, easy returns, and premium customer service at Studio Miradia.",
-  keywords: "Studio Miradia checkout, secure payment, luxury fashion purchase, fashion checkout, online shopping",
-  openGraph: {
-    title: "Checkout - Studio Miradia",
-    description: "Complete your luxury fashion purchase with secure checkout. Fast shipping, easy returns, and premium customer service.",
-    type: "website",
-  },
-}
 
 export default function CheckoutPage() {
   const { cart, clearCart } = useCart()

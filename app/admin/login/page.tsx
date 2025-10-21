@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import type { Metadata } from "next"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
@@ -12,17 +11,6 @@ import { Label } from "../../../components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../components/ui/card"
 import { useToast } from "../../../hooks/use-toast"
 import { Battery as Butterfly } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Admin Login - Studio Miradia",
-  description: "Secure admin login for Studio Miradia's management dashboard. Access product management, order tracking, and customer support tools.",
-  keywords: "Studio Miradia admin login, admin access, fashion admin, luxury fashion management, admin authentication",
-  openGraph: {
-    title: "Admin Login - Studio Miradia",
-    description: "Secure admin login for Studio Miradia's management dashboard.",
-    type: "website",
-  },
-}
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("")

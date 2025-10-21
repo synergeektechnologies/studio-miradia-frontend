@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import type { Metadata } from "next"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
@@ -13,17 +12,6 @@ import { Label } from "../../components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../../components/ui/card"
 import { useToast } from "../../hooks/use-toast"
 import { Eye, EyeOff, Mail, Lock, User, Phone, ArrowRight } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Register - Studio Miradia",
-  description: "Create your Studio Miradia account to access exclusive collections, track orders, and enjoy personalized luxury fashion experiences.",
-  keywords: "Studio Miradia register, create account, luxury fashion membership, fashion account signup",
-  openGraph: {
-    title: "Register - Studio Miradia",
-    description: "Create your Studio Miradia account to access exclusive collections, track orders, and enjoy personalized luxury fashion experiences.",
-    type: "website",
-  },
-}
 
 export default function RegisterPage() {
   const [firstname, setFirstname] = useState("")

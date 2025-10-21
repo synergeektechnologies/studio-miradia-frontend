@@ -13,18 +13,6 @@ import { ProfileEditDialog } from "../../components/account/profile-edit-dialog"
 import { PasswordChangeDialog } from "../../components/account/password-change-dialog"
 import { OrderHistory } from "../../components/account/order-history"
 import { AddressManagement } from "../../components/account/address-management"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "My Account - Studio Miradia",
-  description: "Manage your Studio Miradia account, view order history, update profile information, and access your wishlist. Your personal luxury fashion dashboard.",
-  keywords: "Studio Miradia account, customer dashboard, order history, profile management, luxury fashion account",
-  openGraph: {
-    title: "My Account - Studio Miradia",
-    description: "Manage your Studio Miradia account, view order history, update profile information, and access your wishlist.",
-    type: "website",
-  },
-}
 
 export default function AccountPage() {
   const { user, logout, isLoading } = useAuth()
