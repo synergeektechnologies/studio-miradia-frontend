@@ -10,12 +10,12 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { useAdmin } from "@/contexts/admin-context"
-import { useToast } from "@/hooks/use-toast"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Label } from "../ui/label"
+import { useAdmin } from "../../contexts/admin-context"
+import { useToast } from "../../hooks/use-toast"
 
 interface CustomerDialogProps {
   open: boolean

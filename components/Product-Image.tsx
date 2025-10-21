@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { getProductDisplayImage } from '@/lib/utils'
+import { getProductDisplayImage } from '../lib/utils'
 
 interface ProductImageProps {
   product: {

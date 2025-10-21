@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { ProductCard } from "@/components/product-card"
-import type { Product } from "@/types/product"
-import { Button } from "@/components/ui/button"
+import { ProductCard } from "../product-card"
+import type { Product } from "../../types/product"
+import { Button } from "../ui/button"
 
 interface RelatedProductsProps {
   currentProductId: string

@@ -2,10 +2,10 @@
 
 import type React from "react"
 
-import { useAuth } from "@/contexts/auth-context"
+import { useAuth } from "../contexts/auth-context"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import { Spinner } from "@/components/ui/spinner"
+import { Spinner } from "./ui/spinner"
 
 interface ProtectedRouteProps {
   children: React.ReactNode

@@ -13,16 +13,16 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox"
-import { useToast } from "@/hooks/use-toast"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Label } from "../ui/label"
+import { Checkbox } from "../ui/checkbox"
+import { useToast } from "../../hooks/use-toast"
 import { Upload, X } from "lucide-react"
 import Image from "next/image"
-import type { Color } from "@/types/color"
-import { createColor, updateColor, uploadColorImage, deleteColorImage } from "@/lib/colors"
+import type { Color } from "../../types/color"
+import { createColor, updateColor, uploadColorImage, deleteColorImage } from "../../lib/colors"
 
 // Validation schema
 const colorSchema = z.object({

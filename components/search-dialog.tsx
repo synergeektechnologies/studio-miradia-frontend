@@ -2,15 +2,15 @@
 
 import { useState, useMemo, useEffect } from "react"
 import { Search, X, Sparkles } from "lucide-react"
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
-import { Input } from "@/components/ui/input"
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet"
+import { Input } from "./ui/input"
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { fetchProducts } from "@/lib/products"
-import type { Product } from "@/types/product"
-import { getProductDisplayImage } from "@/lib/utils"
+import { Button } from "./ui/button"
+import { Badge } from "./ui/badge"
+import { fetchProducts } from "../lib/products"
+import type { Product } from "../types/product"
+import { getProductDisplayImage } from "../lib/utils"
 
 interface SearchDialogProps {
   open: boolean

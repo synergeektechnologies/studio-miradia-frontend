@@ -1,12 +1,12 @@
 "use client"
 
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Button } from "@/components/ui/button"
-import { useAdmin } from "@/contexts/admin-context"
-import { useToast } from "@/hooks/use-toast"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../ui/dialog"
+import { Badge } from "../ui/badge"
+import { Separator } from "../ui/separator"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
+import { Button } from "../ui/button"
+import { useAdmin } from "../../contexts/admin-context"
+import { useToast } from "../../hooks/use-toast"
 import { useState } from "react"
 
 interface OrderDetailsDialogProps {

@@ -1,16 +1,16 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "../ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
+import { Badge } from "../ui/badge"
 import { ColorDialog } from "./color-dialog"
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "../../hooks/use-toast"
 import { Plus, Edit, Trash2 } from "lucide-react"
 import Image from "next/image"
-import type { Color } from "@/types/color"
-import { fetchColors, deleteColor } from "@/lib/colors"
+import type { Color } from "../../types/color"
+import { fetchColors, deleteColor } from "../../lib/colors"
 
 export function ColorManagement() {
   const [colors, setColors] = useState<Color[]>([])

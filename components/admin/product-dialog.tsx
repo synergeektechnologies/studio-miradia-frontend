@@ -13,21 +13,21 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { useAdmin } from "@/contexts/admin-context"
-import { getActiveCategories } from "@/lib/admin-api-client"
-import { useToast } from "@/hooks/use-toast"
+} from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Input } from "../ui/input"
+import { Label } from "../ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
+import { Checkbox } from "../ui/checkbox"
+import { useAdmin } from "../../contexts/admin-context"
+import { getActiveCategories } from "../../lib/admin-api-client"
+import { useToast } from "../../hooks/use-toast"
 import { Upload, Trash2, X } from "lucide-react"
 import Image from "next/image"
-import type { Product } from "@/types/product"
-import type { Color } from "@/types/color"
-import { uploadMultipleProductImages, removeProductImage } from "@/lib/admin-api-client"
-import { fetchActiveColors, updateProductColors } from "@/lib/colors"
+import type { Product } from "../../types/product"
+import type { Color } from "../../types/color"
+import { uploadMultipleProductImages, removeProductImage } from "../../lib/admin-api-client"
+import { fetchActiveColors, updateProductColors } from "../../lib/colors"
 
 // ✅ Validation schema
 const productSchema = z.object({

@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Heart, ShoppingCart, Truck, RotateCcw, Shield, ZoomIn } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import type { Product } from "@/types/product"
-import type { Color } from "@/types/color"
-import { useCart } from "@/contexts/cart-context"
-import { useToast } from "@/hooks/use-toast"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
+import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
+import type { Product } from "../../types/product"
+import type { Color } from "../../types/color"
+import { useCart } from "../../contexts/cart-context"
+import { useToast } from "../../hooks/use-toast"
 
 interface ProductDetailsProps {
   product: Product

@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ProductCard } from "@/components/product-card"
-import { fetchProducts } from "@/lib/products"
+import { ProductCard } from "../product-card"
+import { fetchProducts } from "../../lib/products"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import type { Product } from "@/types/product"
+import { Button } from "../ui/button"
+import type { Product } from "../../types/product"
 
 export function ProductGrid() {
   const [currentIndex, setCurrentIndex] = useState(0)

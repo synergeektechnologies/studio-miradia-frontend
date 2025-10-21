@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { fetchProducts } from "@/lib/products"
+import { fetchProducts } from "../lib/products"
 import { ChevronRight } from "lucide-react"
 import { useRouter } from "next/navigation"
-import type { Product } from "@/types/product"
-import { getProductDisplayImage } from "@/lib/utils"
+import type { Product } from "../types/product"
+import { getProductDisplayImage } from "../lib/utils"
 
 interface ShopMegaMenuProps {
   isHomePage: boolean

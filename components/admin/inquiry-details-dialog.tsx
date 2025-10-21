@@ -1,9 +1,9 @@
 "use client"
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { useAdmin } from "@/contexts/admin-context"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog"
+import { Button } from "../ui/button"
+import { Badge } from "../ui/badge"
+import { useAdmin } from "../../contexts/admin-context"
 import { Mail, Calendar, MessageSquare, Phone } from "lucide-react"
 
 interface InquiryDetailsDialogProps {
