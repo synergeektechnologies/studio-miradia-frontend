@@ -1,52 +1,6 @@
-"use client"
-
 import { Heart, Sparkles, Package } from "lucide-react"
-import { useEffect, useRef } from "react"
 
 export function ParallaxWhyChooseUs() {
-  const parallaxRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrolled = window.pageYOffset
-        const elementTop = parallaxRef.current.offsetTop
-        const elementHeight = parallaxRef.current.offsetHeight
-        const windowHeight = window.innerHeight
-        
-        // Calculate if element is in viewport
-        const isInView = scrolled + windowHeight > elementTop && scrolled < elementTop + elementHeight
-        
-        if (isInView) {
-          // Different parallax rates for mobile vs desktop
-          const isMobile = window.innerWidth < 768
-          const rate = isMobile ? scrolled * -0.3 : scrolled * -0.5
-          parallaxRef.current.style.transform = `translateY(${rate}px)`
-        }
-      }
-    }
-
-    // Check user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    
-    // Add parallax effect with throttling for better performance
-    if (!prefersReducedMotion) {
-      let ticking = false
-      const throttledScroll = () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            handleScroll()
-            ticking = false
-          })
-          ticking = true
-        }
-      }
-      
-      window.addEventListener('scroll', throttledScroll, { passive: true })
-      return () => window.removeEventListener('scroll', throttledScroll)
-    }
-  }, [])
-
   const features = [
     {
       icon: Package,
@@ -66,22 +20,18 @@ export function ParallaxWhyChooseUs() {
   ]
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       {/* Parallax Background Image */}
       <div
-        ref={parallaxRef}
-        className="absolute inset-0 w-full h-[120%] -top-[10%]"
+        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center"
         style={{
           backgroundImage: "url('/Untitled-19.png')",
-          backgroundPosition: "center top",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          willChange: "transform",
-          transform: "translateZ(0)", // Force hardware acceleration
-          backfaceVisibility: "hidden", // Prevent flickering
         }}
-      />
-      <div className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center">
+      >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40" />
 
