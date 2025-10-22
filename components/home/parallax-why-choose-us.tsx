@@ -21,15 +21,11 @@ export function ParallaxWhyChooseUs() {
 
   return (
     <section className="relative">
-      {/* Parallax Background Image */}
+      {/* Parallax Background Image - Fixed on desktop, scroll on mobile */}
       <div
-        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center"
+        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center bg-top bg-no-repeat bg-cover parallax-bg"
         style={{
           backgroundImage: "url('/Untitled-19.png')",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "top",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
         }}
       >
         {/* Overlay for better text readability */}

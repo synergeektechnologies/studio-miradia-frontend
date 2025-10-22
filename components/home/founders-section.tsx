@@ -1,23 +1,11 @@
-"use client"
-
-import { useIsIOS } from "../../hooks/use-ios"
-
 export function FoundersSection() {
-  const isIOS = useIsIOS()
-
   return (
     <section className="relative">
-      {/* Parallax Background Image */}
+      {/* Parallax Background Image - Fixed on desktop, scroll on mobile */}
       <div
-        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center"
+        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center bg-top bg-no-repeat bg-cover parallax-bg"
         style={{
           backgroundImage: "url('/Untitled-9.jpg')",
-          backgroundAttachment: isIOS ? "scroll" : "fixed",
-          backgroundPosition: isIOS ? "center top" : "top",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          // Add will-change for better performance on iOS
-          willChange: isIOS ? "auto" : "transform",
         }}
       />
     </section>

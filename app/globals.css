@@ -139,6 +139,17 @@
     animation: slideUp 0.8s ease-out;
   }
   
+  /* Responsive parallax - fixed on desktop, scroll on mobile */
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+  
+  @media (min-width: 768px) {
+    .parallax-bg {
+      background-attachment: fixed;
+    }
+  }
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
