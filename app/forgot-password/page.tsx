@@ -36,7 +36,7 @@ export default function ForgotPasswordPage() {
         setIsEmailSent(true)
         toast({
           title: "Reset email sent!",
-          description: "Please check your email for password reset instructions.",
+          description: "Please check your email (and spam folder) for password reset instructions.",
         })
       } else {
         const errorData = await response.json()
@@ -89,6 +89,11 @@ export default function ForgotPasswordPage() {
                 <p className="text-gray-600 mb-4">
                   Please check your email inbox and follow the instructions to reset your password.
                 </p>
+                <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg mb-4">
+                  <p className="text-sm text-yellow-800">
+                    <strong>📧 Important:</strong> If you don't see the email in your inbox, please check your spam/junk folder. Sometimes reset emails end up there.
+                  </p>
+                </div>
                 <p className="text-sm text-gray-500">
                   Didn't receive the email? Check your spam folder or try again.
                 </p>
@@ -149,6 +154,11 @@ export default function ForgotPasswordPage() {
             <CardDescription className="text-lg">
               No worries! Enter your email address and we'll send you a link to reset your password.
             </CardDescription>
+            <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800">
+                <strong>💡 Tip:</strong> After submitting, please check your spam/junk folder if you don't see the reset email in your inbox.
+              </p>
+            </div>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
