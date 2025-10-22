@@ -89,10 +89,6 @@ export default function AdminLoginPage() {
               {isLoading ? "Logging in..." : "Login"}
             </Button>
           </form>
-          <div className="mt-4 text-sm text-center text-muted-foreground">
-            <p>Demo credentials:</p>
-            <p className="font-mono text-xs mt-1">admin@studiomiradia.com / admin123</p>
-          </div>
         </CardContent>
       </Card>
     </div>

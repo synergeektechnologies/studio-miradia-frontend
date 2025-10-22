@@ -11,6 +11,7 @@ import { MobileToast } from "../components/mobile-toast"
 import { Suspense } from "react"
 import { ConditionalLayout } from "../components/conditional-layout"
 import { DefaultStructuredData } from "../components/structured-data"
+import { GoogleAnalytics } from "../components/google-analytics"
 
 export const metadata: Metadata = {
   title: {
@@ -127,6 +128,9 @@ export default function RootLayout({
         
         {/* Structured Data for SEO */}
         <DefaultStructuredData />
+        
+        {/* Google Analytics */}
+        <GoogleAnalytics />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <AuthProvider>

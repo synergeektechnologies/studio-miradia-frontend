@@ -1,17 +1,21 @@
 "use client"
 
 import type React from "react"
-import { createContext, useContext, useState, useCallback } from "react"
+import { createContext, useContext, useState, useCallback, useEffect } from "react"
 import { useToast } from "../hooks/use-toast"
 import type { Product } from "../types/product"
-
-export interface CartProduct extends Product {
-  selectedColorId?: string
-}
-
-interface CartItem extends CartProduct {
-  quantity: number
-}
+import { 
+  getCartFromCookies, 
+  saveCartToCookies, 
+  getWishlistFromCookies, 
+  saveWishlistToCookies,
+  clearCartCookies,
+  clearWishlistCookies,
+  type CartItem,
+  type CartProduct
+} from "../lib/cookies"
+import { trackAddToCart, trackRemoveFromCart } from "../components/google-analytics"
+import { useAnalytics } from "../hooks/use-analytics"
 
 interface CartContextType {
   cart: CartItem[]
@@ -32,7 +36,41 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([])
   const [wishlist, setWishlist] = useState<Product[]>([])
+  const [isInitialized, setIsInitialized] = useState(false)
   const { toast } = useToast()
+  const { trackWishlistAdd, trackWishlistRemove } = useAnalytics()
+
+  // Load data from cookies on mount
+  useEffect(() => {
+    const loadFromCookies = () => {
+      try {
+        const savedCart = getCartFromCookies()
+        const savedWishlist = getWishlistFromCookies()
+        
+        setCart(savedCart)
+        setWishlist(savedWishlist)
+        setIsInitialized(true)
+      } catch (error) {
+        console.error('Error loading cart/wishlist from cookies:', error)
+        setIsInitialized(true)
+      }
+    }
+
+    loadFromCookies()
+  }, [])
+
+  // Save to cookies whenever cart or wishlist changes
+  useEffect(() => {
+    if (isInitialized) {
+      saveCartToCookies(cart)
+    }
+  }, [cart, isInitialized])
+
+  useEffect(() => {
+    if (isInitialized) {
+      saveWishlistToCookies(wishlist)
+    }
+  }, [wishlist, isInitialized])
 
   const addToCart = useCallback(
     (product: CartProduct) => {
@@ -51,6 +89,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         }
         return [...prev, { ...product, quantity: 1 }]
       })
+      
+      // Track add to cart event in Google Analytics
+      trackAddToCart(
+        product.id,
+        product.name,
+        product.category || "Fashion",
+        product.price,
+        1
+      )
+      
       toast({
         title: "Added to cart",
         description: `${product.name} has been added to your cart.`,
@@ -60,7 +108,20 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   )
 
   const removeFromCart = useCallback((productId: string) => {
-    setCart((prev) => prev.filter((item) => item.id !== productId))
+    setCart((prev) => {
+      const itemToRemove = prev.find((item) => item.id === productId)
+      if (itemToRemove) {
+        // Track remove from cart event in Google Analytics
+        trackRemoveFromCart(
+          itemToRemove.id,
+          itemToRemove.name,
+          itemToRemove.category || "Fashion",
+          itemToRemove.price,
+          itemToRemove.quantity
+        )
+      }
+      return prev.filter((item) => item.id !== productId)
+    })
   }, [])
 
   const updateQuantity = useCallback(
@@ -76,6 +137,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const clearCart = useCallback(() => {
     setCart([])
+    clearCartCookies()
   }, [])
 
   const toggleWishlist = useCallback(
@@ -83,16 +145,22 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       setWishlist((prev) => {
         const exists = prev.find((item) => item.id === product.id)
         if (exists) {
+          // Track wishlist removal
+          trackWishlistRemove(product.id, product.name)
           return prev.filter((item) => item.id !== product.id)
+        } else {
+          // Track wishlist addition
+          trackWishlistAdd(product.id, product.name)
+          return [...prev, product]
         }
-        return [...prev, product]
       })
     },
-    [],
+    [trackWishlistAdd, trackWishlistRemove],
   )
 
   const clearWishlist = useCallback(() => {
     setWishlist([])
+    clearWishlistCookies()
   }, [])
 
   const isInWishlist = useCallback((productId: string) => wishlist.some((item) => item.id === productId), [wishlist])
