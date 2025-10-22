@@ -147,7 +147,7 @@ export default function LoginPage() {
                 )}
               </Button>
               
-              <div className="text-center">
+              <div className="text-center space-y-3">
                 <p className="text-sm text-muted-foreground">
                   Don't have an account?{" "}
                   <Link 
@@ -155,6 +155,14 @@ export default function LoginPage() {
                     className="text-primary hover:text-primary/80 font-medium hover:underline transition-colors"
                   >
                     Create one
+                  </Link>
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  <Link 
+                    href="/forgot-password" 
+                    className="text-primary hover:text-primary/80 font-medium hover:underline transition-colors"
+                  >
+                    Forgot your password?
                   </Link>
                 </p>
               </div>
