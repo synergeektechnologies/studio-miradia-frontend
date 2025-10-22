@@ -300,7 +300,7 @@ export default function CheckoutPage() {
                       id="city" 
                       value={formData.city}
                       onChange={handleInputChange}
-                      placeholder="Mumbai" 
+                      placeholder="Coimbatore" 
                       required 
                       className="mt-1.5" 
                     />
@@ -311,7 +311,7 @@ export default function CheckoutPage() {
                       id="state" 
                       value={formData.state}
                       onChange={handleInputChange}
-                      placeholder="Maharashtra" 
+                      placeholder="Tamil Nadu" 
                       required 
                       className="mt-1.5" 
                     />
@@ -322,7 +322,7 @@ export default function CheckoutPage() {
                       id="pincode" 
                       value={formData.pincode}
                       onChange={handleInputChange}
-                      placeholder="400001" 
+                      placeholder="641042" 
                       required 
                       className="mt-1.5" 
                     />
@@ -352,7 +352,7 @@ export default function CheckoutPage() {
                 <div className="space-y-4 mb-6 max-h-64 overflow-y-auto">
                   {cart.map((item) => (
                     <div key={`${item.id}-${item.selectedColorId || 'no-color'}`} className="flex gap-3">
-                      <div className="relative w-16 h-20 flex-shrink-0 rounded-md overflow-hidden bg-secondary">
+                      <div className="relative w-16 h-20 shrink-0 rounded-md overflow-hidden bg-secondary">
                         <Image 
                           src={getProductDisplayImage(item)} 
                           alt={item.name} 

@@ -27,7 +27,7 @@
 //     eventName: "Studio Miradia Spring Collection Launch",
 //     startDate: "2024-03-15T18:00:00+05:30",
 //     endDate: "2024-03-15T21:00:00+05:30",
-//     location: "Studio Miradia Showroom, Mumbai"
+//     location: "Studio Miradia Showroom, Coimbatore"
 //   }
 
 //   return <EventSchema {...upcomingEvent} />

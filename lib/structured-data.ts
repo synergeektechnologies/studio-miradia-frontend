@@ -35,10 +35,10 @@ export const organizationSchema = {
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Fashion Street",
-    "addressLocality": "Mumbai",
-    "addressRegion": "Maharashtra",
-    "postalCode": "400001",
+    "streetAddress": "Mother's Garden, Visalakshi Colony, Gokulam Colony Extn, Kovaipudur",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "641042",
     "addressCountry": "IN"
   },
   "areaServed": {
@@ -146,10 +146,10 @@ export const localBusinessSchema = {
   "email": "hello@studiomiradia.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Fashion Street",
-    "addressLocality": "Mumbai",
-    "addressRegion": "Maharashtra",
-    "postalCode": "400001",
+    "streetAddress": "Mother's Garden, Visalakshi Colony, Gokulam Colony Extn, Kovaipudur",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "641042",
     "addressCountry": "IN"
   },
   "geo": {
@@ -211,7 +211,7 @@ export const howToSchema = (steps: Array<{name: string, text: string, image?: st
   "@type": "HowTo",
   "name": "How to Care for Studio Miradia Garments",
   "description": "Learn how to properly care for your luxury handcrafted garments",
-  "image": "https://studiomiradia.com/care-instructions.jpg",
+  // "image": "https://studiomiradia.com/care-instructions.jpg",
   "totalTime": "PT10M",
   "supply": [
     {
@@ -278,10 +278,10 @@ export const eventSchema = (eventName: string, startDate: string, endDate: strin
     "name": location,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Fashion Street",
-      "addressLocality": "Mumbai",
-      "addressRegion": "Maharashtra",
-      "postalCode": "400001",
+      "streetAddress": "Mother's Garden, Visalakshi Colony, Gokulam Colony Extn, Kovaipudur",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641042",
       "addressCountry": "IN"
     }
   },

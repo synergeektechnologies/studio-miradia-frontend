@@ -8,7 +8,8 @@ import { Heart, ShoppingCart } from "lucide-react"
 import { Button } from "./ui/button"
 import { Badge } from "./ui/badge"
 import type { Product } from "../types/product"
-import { useCart, type CartProduct } from "../contexts/cart-context"
+import { useCart } from "../contexts/cart-context"
+import type { CartProduct } from "../lib/cookies"
 import { useState } from "react"
 import { useToast } from "../hooks/use-toast"
 import ProductImage from "./Product-Image"
@@ -53,7 +54,7 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
       <Link href={`/product/${product.id}`}>
         <div className="group relative overflow-hidden h-full flex flex-col">
           {/* Image Container */}
-          <div className="relative aspect-[3/4] overflow-hidden bg-secondary/20 flex-shrink-0">
+          <div className="relative aspect-3/4 overflow-hidden bg-secondary/20 shrink-0">
             {/* <Image
               src={product.image || "/placeholder.svg"}
               alt={product.name}
@@ -64,8 +65,8 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
           </div>
 
           {/* Minimal Product Info */}
-          <div className="mt-3 text-center flex flex-col flex-grow">
-            <h3 className={`font-light text-sm mb-1 min-h-[2.5rem] overflow-hidden ${textColor === "black" ? "text-black/90" : "text-white/90"}`} style={{
+          <div className="mt-3 text-center flex flex-col grow">
+            <h3 className={`font-light text-sm mb-1 min-h-10 overflow-hidden ${textColor === "black" ? "text-black/90" : "text-white/90"}`} style={{
               display: '-webkit-box',
               WebkitLineClamp: 2,
               WebkitBoxOrient: 'vertical'
@@ -85,7 +86,7 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Image Container */}
-        <div className="relative aspect-[3/4] overflow-hidden bg-secondary flex-shrink-0">
+        <div className="relative aspect-3/4 overflow-hidden bg-secondary shrink-0">
           <ProductImage product={product} />
 
           {/* Badges */}
@@ -117,8 +118,8 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
         </div>
 
         {/* Product Info */}
-        <div className="p-4 flex flex-col flex-grow">
-          <h3 className="font-medium text-lg mb-2 text-balance min-h-[3.5rem] overflow-hidden" style={{
+        <div className="p-4 flex flex-col grow">
+          <h3 className="font-medium text-lg mb-2 text-balance min-h-14 overflow-hidden" style={{
             display: '-webkit-box',
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical'

@@ -178,8 +178,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Studio</h3>
-                    <p className="text-muted-foreground">123 Fashion Street, Kovaipudur</p>
-                    <p className="text-muted-foreground">Coimbatore, Tamil Nadu</p>
+                    <p className="text-muted-foreground">Mother's Garden, Visalakshi Colony</p>
+                    <p className="text-muted-foreground">Gokulam Colony Extn, Kovaipudur</p>
+                    <p className="text-muted-foreground">Coimbatore - 641042, Tamil Nadu</p>
                     <p className="text-muted-foreground">India</p>
                   </div>
                 </div>

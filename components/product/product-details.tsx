@@ -84,7 +84,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           {/* Main Image */}
           <Dialog>
             <DialogTrigger asChild>
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-secondary cursor-zoom-in group">
+              <div className="relative aspect-3/4 rounded-lg overflow-hidden bg-secondary cursor-zoom-in group">
                 <Image
                   src={currentImage || "/placeholder.svg"}
                   alt={product.name}
@@ -98,7 +98,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
               </div>
             </DialogTrigger>
             <DialogContent className="max-w-4xl">
-              <div className="relative aspect-[3/4] w-full">
+              <div className="relative aspect-3/4 w-full">
                 <Image
                   src={currentImage || "/placeholder.svg"}
                   alt={product.name}
@@ -120,7 +120,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
                   <button
                     key={index}
                     onClick={() => setSelectedImageIndex(index)}
-                    className={`relative w-20 h-20 rounded-lg overflow-hidden border-2 flex-shrink-0 transition-colors ${
+                    className={`relative w-20 h-20 rounded-lg overflow-hidden border-2 shrink-0 transition-colors ${
                       index === selectedImageIndex ? 'border-primary' : 'border-border hover:border-primary/50'
                     }`}
                   >
