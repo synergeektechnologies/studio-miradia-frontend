@@ -8,8 +8,6 @@ import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
 import { Textarea } from "../../components/ui/textarea"
 import { useToast } from "../../hooks/use-toast"
-import { StructuredData } from "../../components/structured-data"
-import { faqSchema } from "../../lib/structured-data"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,21 +19,6 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
-
-  const contactFAQs = [
-    {
-      question: "How can I contact Studio Miradia?",
-      answer: "You can reach us via email at hello@studiomiradia.com, call us at +91 98765 43210, or visit our studio at 123 Fashion Street, Mumbai."
-    },
-    {
-      question: "What are your business hours?",
-      answer: "We're open Monday to Friday from 10:00 AM to 7:00 PM, and Saturday from 10:00 AM to 6:00 PM. We're closed on Sundays."
-    },
-    {
-      question: "Do you offer customer support?",
-      answer: "Yes, we provide comprehensive customer support for all your fashion needs, including sizing, styling advice, and order assistance."
-    }
-  ]
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -72,7 +55,6 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <StructuredData data={faqSchema(contactFAQs)} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-12 md:pb-16">
         <div className="text-center mb-12">
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
@@ -122,7 +104,7 @@ export default function ContactPage() {
                   type="tel"
                   value={formData.phoneNumber}
                   onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 XXXXXXXXXX"
                 />
               </div>
 
@@ -171,69 +153,37 @@ export default function ContactPage() {
               <h2 className="font-serif text-2xl font-semibold mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#F5E8E0] flex items-center justify-center">
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-[#F5E8E0] flex items-center justify-center">
                     <Mail className="h-6 w-6 text-[#8B5A4A]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">hello@studiomiradia.com</p>
-                    <p className="text-muted-foreground">support@studiomiradia.com</p>
+                    <p className="text-muted-foreground">studiomiradia@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#F5E8E0] flex items-center justify-center">
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-[#F5E8E0] flex items-center justify-center">
                     <Phone className="h-6 w-6 text-[#8B5A4A]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <p className="text-muted-foreground">+91 98765 43210</p>
-                    <p className="text-sm text-muted-foreground mt-1">Mon-Sat, 10 AM - 6 PM IST</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#F5E8E0] flex items-center justify-center">
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-[#F5E8E0] flex items-center justify-center">
                     <MapPin className="h-6 w-6 text-[#8B5A4A]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Studio</h3>
-                    <p className="text-muted-foreground">123 Fashion Street</p>
-                    <p className="text-muted-foreground">Mumbai, Maharashtra 400001</p>
+                    <p className="text-muted-foreground">123 Fashion Street, Kovaipudur</p>
+                    <p className="text-muted-foreground">Coimbatore, Tamil Nadu</p>
                     <p className="text-muted-foreground">India</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Business Hours */}
-            <div className="bg-secondary rounded-lg p-6">
-              <h3 className="font-serif text-xl font-semibold mb-4">Business Hours</h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Monday - Friday</span>
-                  <span className="font-medium">10:00 AM - 7:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Saturday</span>
-                  <span className="font-medium">10:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Sunday</span>
-                  <span className="font-medium">Closed</span>
-                </div>
-              </div>
-            </div>
-
-            {/* FAQ Link */}
-            <div className="bg-[#F5E8E0] rounded-lg p-6">
-              <h3 className="font-serif text-xl font-semibold mb-2">Have Questions?</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Check out our FAQ section for quick answers to common questions about orders, shipping, and returns.
-              </p>
-              <Button variant="outline" className="bg-transparent">
-                View FAQ
-              </Button>
             </div>
           </div>
         </div>
