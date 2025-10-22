@@ -14,7 +14,7 @@ import Image from "next/image"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-[#8B5A4A]/5 via-white to-[#8B5A4A]/10 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-linear-to-br from-[#8B5A4A]/5 via-white to-[#8B5A4A]/10 flex items-center justify-center px-4 mt-5">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heart decoration */}
         <div className="relative mb-8">
@@ -96,38 +96,6 @@ export default function NotFound() {
               </Link>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Popular Categories */}
-        <div className="mb-12">
-          <h3 className="text-xl font-serif text-[#8B5A4A] mb-6">Popular Categories</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/shop?category=dresses">
-              <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-[#8B5A4A] hover:text-white transition-colors">
-                Dresses
-              </Badge>
-            </Link>
-            <Link href="/shop?category=tops">
-              <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-[#8B5A4A] hover:text-white transition-colors">
-                Tops
-              </Badge>
-            </Link>
-            <Link href="/shop?category=bottoms">
-              <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-[#8B5A4A] hover:text-white transition-colors">
-                Bottoms
-              </Badge>
-            </Link>
-            <Link href="/shop?category=accessories">
-              <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-[#8B5A4A] hover:text-white transition-colors">
-                Accessories
-              </Badge>
-            </Link>
-            <Link href="/shop?category=new-arrivals">
-              <Badge variant="secondary" className="px-4 py-2 text-sm hover:bg-[#8B5A4A] hover:text-white transition-colors">
-                New Arrivals
-              </Badge>
-            </Link>
-          </div>
         </div>
 
         {/* Main Action Buttons */}
