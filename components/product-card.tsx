@@ -124,8 +124,30 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical'
           }}>{product.name}</h3>
-          <div className="flex items-center gap-2 mt-auto">
+          <div className="flex items-center justify-between mt-auto">
             <span className="text-lg font-semibold text-[#8B5A4A]">₹{product.price.toLocaleString()}</span>
+            
+            {/* Mobile/Tablet Add to Cart Button - visible on screens smaller than lg */}
+            {product.inStock && (
+              <div className="lg:hidden flex items-center gap-2">
+                <Button
+                  size="sm"
+                  className="bg-[#006D77] hover:bg-[#005761] text-white text-xs px-3 py-1 h-8"
+                  onClick={handleAddToCart}
+                >
+                  <ShoppingCart className="h-3 w-3 mr-1" />
+                  Add
+                </Button>
+                <Button
+                  size="sm"
+                  variant={inWishlist ? "default" : "outline"}
+                  className={`text-xs px-2 py-1 h-8 ${inWishlist ? "bg-red-500 hover:bg-red-600 text-white border-red-500" : "border-gray-300"}`}
+                  onClick={handleToggleWishlist}
+                >
+                  <Heart className={`h-3 w-3 ${inWishlist ? "fill-current" : ""}`} />
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
