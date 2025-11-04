@@ -62,13 +62,13 @@ export default function AboutPage() {
         </div>
         <div className="space-y-6 text-center">
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            AT STUDIOMIRADIA WE SPECIALIZE IN CREATING EXQUISITE DESIGNER SAREES.
+            At Studio Miradia we specialize in creating exquisite designer sarees.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            ALL OF OUR PRODUCTS ARE MADE WITH THE HIGHEST-GRADE MATERIALS AND CRAFTED WITH IMPECCABLE ATTENTION TO DETAIL. OUR PIECES ARE CONCEIVED TO CELEBRATE THE BEAUTY, ELEGANCE, AND GRACE OF WOMEN, WHILE ALSO PROVIDING A UNIQUE AND PERSONALIZED TOUCH TO EACH GARMENT.
+            All of our products are made with the highest-grade materials and crafted with impeccable attention to detail. Our pieces are conceived to celebrate the beauty, elegance, and grace of women, while also providing a unique and personalized touch to each garment.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            OUR BRAND IS MORE THAN JUST A BRAND. IT IS A CELEBRATION OF WOMEN'S EMPOWERMENT AND THE CREATIVITY THAT COMES FROM THE PASSION FOR FASHION. WE BELIEVE THAT EVERY WOMAN DESERVES TO FEEL CONFIDENT, GORGEOUS, AND EMPOWERED, AND THAT IS WHY WE CREATE PIECES THAT ARE TAILORED TO THE INDIVIDUAL STYLE AND PERSONALITY OF OUR CLIENTS.
+            Our brand is more than just a brand. It is a celebration of women's empowerment and the creativity that comes from the passion for fashion. We believe that every woman deserves to feel confident, gorgeous, and empowered, and that is why we create pieces that are tailored to the individual style and personality of our clients.
           </p>
         </div>
       </section>
@@ -91,19 +91,19 @@ export default function AboutPage() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#D4A017] text-white mb-6">
               <Sparkles className="h-8 w-8" />
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance">VISION AND THE OWNERS</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance">Vision and the Owners</h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                OUR FOUNDERS ARE A VISIONARY WITH A DEEP PASSION FOR EMPOWERING WOMEN THROUGH FASHION. THEY HAVE SPENT YEARS HONING THEIR CRAFT AND DEVELOPING A DISTINCTIVE STYLE THAT INTEGRATES TRADITIONAL INDIAN MOTIFS WITH CONTEMPORARY DESIGN ELEMENTS.
+                Our founders are a visionary with a deep passion for empowering women through fashion. They have spent years honing their craft and developing a distinctive style that integrates traditional Indian motifs with contemporary design elements.
               </p>
               <p>
-                AT STUDIOMIRADIA WE ARE COMMITTED TO CREATING A SUPPORTIVE AND INCLUSIVE ENVIRONMENT FOR WOMEN. WE BELIEVE THAT FASHION HELPS ENHANCE THE INNER BEAUTY OF A WOMAN. THAT IS WHY WE STRIVE TO CREATE PIECES THAT CELEBRATE WOMEN'S BODIES AND SHOWCASE THEIR UNIQUE BEAUTY AND GRACE.
+                At Studio Miradia we are committed to creating a supportive and inclusive environment for women. We believe that fashion helps enhance the inner beauty of a woman. That is why we strive to create pieces that celebrate women's bodies and showcase their unique beauty and grace.
               </p>
               <p>
-                WE OFFER A RANGE OF STYLES TO SUIT EVERY TASTE AND OCCASION. OUR FOCUS IS ON CREATING TIMELESS PIECES THAT CAN BE WORN FOR ANY OCCASION, WHETHER IT'S A FORMAL EVENT OR A CASUAL GATHERING WITH FRIENDS. AT STUDIOMIRADIA WE BELIEVE THAT FASHION IS NOT JUST ABOUT LOOKING GOOD, BUT ALSO ABOUT FEELING GOOD.
+                We offer a range of styles to suit every taste and occasion. Our focus is on creating timeless pieces that can be worn for any occasion, whether it's a formal event or a casual gathering with friends. At Studio Miradia we believe that fashion is not just about looking good, but also about feeling good.
               </p>
               <p>
-                AT STUDIOMIRADIA WE ALSO OFFER A PERSONALIZED SHOPPING EXPERIENCE. OUR TEAM OF EXPERTS WILL WORK WITH YOU TO UNDERSTAND YOUR UNIQUE STYLE AND PREFERENCES, AND HELP YOU FIND THE PERFECT PIECE TO SUIT YOUR NEEDS. WE BELIEVE THAT EVERY WOMAN DESERVES TO FEEL SPECIAL AND UNIQUE, AND WE STRIVE TO CREATE A SHOPPING EXPERIENCE THAT REFLECTS THAT.
+                At Studio Miradia we also offer a personalized shopping experience. Our team of experts will work with you to understand your unique style and preferences, and help you find the perfect piece to suit your needs. We believe that every woman deserves to feel special and unique, and we strive to create a shopping experience that reflects that.
               </p>
             </div>
           </div>
@@ -115,19 +115,19 @@ export default function AboutPage() {
         <div className="mb-8 text-center">
           <Image src="/logo.png" alt="Studio MiraDia Logo" width={100} height={100} className="mx-auto" />
         </div>
-        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-center">MISSION</h2>
+        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-center">Mission</h2>
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>
-            OUR MISSION AT STUDIOMIRADIA IS TO CREATE UNIQUE, ELEGANT, AND HIGH-QUALITY CLOTHING.
+            Our mission at Studio Miradia is to create unique, elegant, and high-quality clothing.
           </p>
           <p>
-            WE ARE COMMITTED TO CREATING PRODUCTS THAT ARE NOT JUST BEAUTIFUL, BUT ALSO COMFORTABLE, DURABLE, AND SOCIALLY RESPONSIBLE.
+            We are committed to creating products that are not just beautiful, but also comfortable, durable, and socially responsible.
           </p>
           <p>
-            TO ACHIEVE OUR MISSION, WE WORK CLOSELY WITH OUR TEAM OF SKILLED ARTISANS AND DESIGNERS TO CREATE PRODUCTS THAT ARE BOTH TRADITIONAL AND MODERN, REFLECTING THE DIVERSE CULTURAL INFLUENCES OF INDIA.
+            To achieve our mission, we work closely with our team of skilled artisans and designers to create products that are both traditional and modern, reflecting the diverse cultural influences of India.
           </p>
           <p className="text-center pt-4">
-            IN CONCLUSION, STUDIOMIRADIA IS A WOMEN-EMPOWERED BRAND THAT IS COMMITTED TO EMPOWERING WOMEN THROUGH FASHION. THANK YOU FOR CONSIDERING STUDIOMIRADIA FOR YOUR FASHION NEEDS.
+            In conclusion, Studio Miradia is a women-empowered brand that is committed to empowering women through fashion. Thank you for considering Studio Miradia for your fashion needs.
           </p>
         </div>
       </section>
