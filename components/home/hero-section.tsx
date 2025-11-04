@@ -19,17 +19,16 @@ export function HeroSection() {
 
       <div className="relative z-10 px-6 md:px-12 lg:px-20 max-w-3xl">
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal text-white mb-6 leading-tight">
-          Loved by Us,
+          Curated with Love,
           <br />
-          Handpicked for You.
+          Wrapped in Style.
         </h1>
         <p className="text-base md:text-lg text-white/90 mb-3 font-light leading-relaxed max-w-xl">
-          Thoughtfully chosen, just the way we do for ourselves –<br />
-          Sindhu, Ahaana, Ishaani & Hansika.
+        Picked with thought and love, just like we do for us.
         </p>
-        <p className="text-sm md:text-base text-white/80 mb-8 font-light leading-relaxed max-w-xl">
+        {/* <p className="text-sm md:text-base text-white/80 mb-8 font-light leading-relaxed max-w-xl">
           We are fully sold out on our first collection drop. Our next drop will be coming soon. KEEP A WATCH.
-        </p>
+        </p> */}
         <Link href="/shop">
           <Button
             size="lg"
