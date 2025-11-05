@@ -22,7 +22,7 @@ export default function CartPage() {
           <h1 className="font-serif text-3xl font-bold mb-4">Your Cart is Empty</h1>
           <p className="text-muted-foreground mb-8">Add some beautiful pieces to your cart</p>
           <Link href="/shop">
-            <Button size="lg" className="bg-[#006D77] hover:bg-[#005761] text-white">
+            <Button size="lg" className="bg-black hover:bg-black/90 text-white">
               Continue Shopping
             </Button>
           </Link>
@@ -151,7 +151,7 @@ export default function CartPage() {
               </div>
 
               <Link href="/checkout">
-                <Button size="lg" className="w-full bg-[#006D77] hover:bg-[#005761] text-white mb-4">
+                <Button size="lg" className="w-full bg-black hover:bg-black/90 text-white mb-4">
                   Proceed to Checkout
                 </Button>
               </Link>

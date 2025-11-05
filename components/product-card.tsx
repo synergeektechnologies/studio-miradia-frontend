@@ -100,7 +100,7 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-3 animate-in fade-in duration-200">
               <Button
                 size="icon"
-                className="bg-[#006D77] hover:bg-[#005761] text-white rounded-full"
+                className="bg-black hover:bg-black/90 text-white rounded-full"
                 onClick={handleAddToCart}
               >
                 <ShoppingCart className="h-5 w-5" />
@@ -132,7 +132,7 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
               <div className="lg:hidden flex items-center gap-2">
                 <Button
                   size="sm"
-                  className="bg-[#006D77] hover:bg-[#005761] text-white text-xs px-3 py-1 h-8"
+                  className="bg-black hover:bg-black/90 text-white text-xs px-3 py-1 h-8"
                   onClick={handleAddToCart}
                 >
                   <ShoppingCart className="h-3 w-3 mr-1" />

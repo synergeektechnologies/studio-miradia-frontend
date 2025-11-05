@@ -172,3 +172,10 @@
     }
   }
 }
+
+/* Toast background color */
+@layer components {
+  [data-radix-toast-root] {
+    background-color: #d8a7a7 !important;
+  }
+}

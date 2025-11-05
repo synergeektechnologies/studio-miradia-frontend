@@ -226,7 +226,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           <div className="space-y-3">
             <Button
               size="lg"
-              className="w-full bg-[#006D77] hover:bg-[#005761] text-white"
+              className="w-full bg-black hover:bg-black/90 text-white"
               onClick={handleBuyNow}
               disabled={!product.inStock}
             >
@@ -247,17 +247,17 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           {/* Trust Signals */}
           <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
             <div className="text-center">
-              <Truck className="h-6 w-6 mx-auto mb-2 text-[#006D77]" />
+              <Truck className="h-6 w-6 mx-auto mb-2 text-black" />
               <p className="text-xs font-medium">Free Shipping</p>
               <p className="text-xs text-muted-foreground">On orders above ₹2,500</p>
             </div>
             <div className="text-center">
-              <RotateCcw className="h-6 w-6 mx-auto mb-2 text-[#006D77]" />
+              <RotateCcw className="h-6 w-6 mx-auto mb-2 text-black" />
               <p className="text-xs font-medium">7-Day Returns</p>
               <p className="text-xs text-muted-foreground">Easy returns policy</p>
             </div>
             <div className="text-center">
-              <Shield className="h-6 w-6 mx-auto mb-2 text-[#006D77]" />
+              <Shield className="h-6 w-6 mx-auto mb-2 text-black" />
               <p className="text-xs font-medium">Secure Payment</p>
               <p className="text-xs text-muted-foreground">100% secure checkout</p>
             </div>

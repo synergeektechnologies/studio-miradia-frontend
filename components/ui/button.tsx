@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        default: 'text-primary-foreground hover:opacity-90',
         destructive:
           'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:
@@ -41,6 +41,7 @@ function Button({
   variant,
   size,
   asChild = false,
+  style,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
@@ -48,10 +49,21 @@ function Button({
   }) {
   const Comp = asChild ? Slot : 'button'
 
+  // Check if className contains any bg-* Tailwind classes (excluding bg-transparent)
+  const hasBackgroundClass = className && /bg-(?!transparent)[\w-]+/.test(className)
+  
+  // Apply #d8a7a7 background for default variant unless:
+  // 1. style.backgroundColor is explicitly set, OR
+  // 2. className contains bg-* classes (like bg-white, bg-mocha, etc.)
+  const defaultStyle = variant === 'default' && !style?.backgroundColor && !hasBackgroundClass
+    ? { backgroundColor: '#d8a7a7', ...style }
+    : style
+
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
+      style={defaultStyle}
       {...props}
     />
   )

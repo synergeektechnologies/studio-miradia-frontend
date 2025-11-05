@@ -50,7 +50,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-4">About Studio MiraDia</h1>
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-4">About Studio Miradia</h1>
           <p className="text-xl text-white/90 font-light">Where craftsmanship meets elegance</p>
         </div>
       </section>
