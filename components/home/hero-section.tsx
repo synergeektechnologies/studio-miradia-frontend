@@ -8,7 +8,7 @@ export function HeroSection() {
       {/* Background Image with birds/butterflies */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/Untitled-13.jpg"
+          src="/Untitled-13.webp"
           alt="Studio MiraDia luxury fashion"
           fill
           className="object-cover"

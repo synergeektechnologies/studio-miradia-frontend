@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/Untitled-12.jpg"
+            src="/Untitled-12.webp"
             alt="Studio MiraDia artisans at work"
             width={1920}
             height={800}
@@ -79,7 +79,7 @@ export default function AboutPage() {
           {/* Image */}
           <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl order-2 md:order-1">
             <Image
-              src="/0L8A7556.jpg"
+              src="/0L8A7556.webp"
               alt="Studio MiraDia founders"
               fill
               className="object-cover object-top"

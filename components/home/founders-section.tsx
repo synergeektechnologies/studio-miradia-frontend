@@ -5,7 +5,7 @@ export function FoundersSection() {
       <div
         className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center bg-top bg-no-repeat bg-cover parallax-bg"
         style={{
-          backgroundImage: "url('/Untitled-9.jpg')",
+          backgroundImage: "url('/Untitled-9.webp')",
         }}
       />
     </section>

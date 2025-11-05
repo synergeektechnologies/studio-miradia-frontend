@@ -25,7 +25,7 @@ export function ParallaxWhyChooseUs() {
       <div
         className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center bg-top bg-no-repeat bg-cover parallax-bg"
         style={{
-          backgroundImage: "url('/Untitled-19.png')",
+          backgroundImage: "url('/Untitled-19.webp')",
         }}
       >
         {/* Overlay for better text readability */}
