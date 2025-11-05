@@ -23,7 +23,6 @@ function ShopPageContent() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  // Load products from backend
   useEffect(() => {
     let active = true
     setLoading(true)
@@ -97,12 +96,14 @@ function ShopPageContent() {
 
   return (
     <main className="min-h-screen bg-background">
-      <StructuredData data={collectionPageSchema(
-        categoryParam || "All Products", 
-        categoryParam 
-          ? `Discover our exclusive ${categoryParam} collection of handcrafted luxury pieces`
-          : "Discover our complete collection of handcrafted luxury pieces"
-      )} />
+      <div className="mb-15">
+        <StructuredData data={collectionPageSchema(
+          categoryParam || "All Products", 
+          categoryParam 
+            ? `Discover our exclusive ${categoryParam} collection of handcrafted luxury pieces`
+            : "Discover our complete collection of handcrafted luxury pieces"
+        )} />
+      </div>
       {/* Header */}
       <div className="bg-background border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -157,7 +158,7 @@ function ShopPageContent() {
                     setSelectedCategories([])
                     setPriceRange([0, 15000])
                   }}
-                  className="mt-4 text-[#006D77] hover:text-[#005761] underline"
+                  className="mt-4 text-[#d8a7a7] hover:text-[#d8a7a7]/90 underline"
                 >
                   Clear all filters
                 </button>
