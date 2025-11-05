@@ -28,19 +28,19 @@ export function ParallaxWhyChooseUs() {
     <section ref={sectionRef} className="relative bg-[#F8F8F8] overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px] md:min-h-[500px]">
         {/* Left Side - Image */}
-        <div className="relative h-[280px] sm:h-[320px] md:h-full order-1 md:order-1">
+        <div className="hidden md:block relative h-full order-1">
           <Image
             src="/0L8A7623.webp"
             alt="Studio Miradia luxury fashion"
             fill
             className="object-cover"
             priority
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="50vw"
           />
         </div>
 
         {/* Right Side - Content */}
-        <div className="flex items-start md:items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-10 sm:py-12 md:py-16 lg:py-20 xl:py-28 min-h-[280px] sm:min-h-[320px] md:min-h-0 order-2 md:order-2">
+        <div className="flex items-start md:items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-10 sm:py-12 md:py-16 lg:py-20 xl:py-28 order-2">
           <div className={`w-full max-w-[600px] mx-auto md:mx-0 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
