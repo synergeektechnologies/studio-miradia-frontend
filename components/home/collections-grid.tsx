@@ -6,22 +6,22 @@ import Link from "next/link"
 const collections = [
   {
     name: "Organza Tissue Silk",
-    image: "/0L8A7602.jpg",
+    image: "/0L8A7602.webp",
     href: "/shop?category=Organza%20Tissue%20Silk%20Sarees",
   },
   {
     name: "Banarasi Katan Silk",
-    image: "/0L8A7546.jpg",
+    image: "/0L8A7546.webp",
     href: "/shop?category=Banarasi%20Katan%20Silk%20Saree",
   },
   {
     name: "Kota Silk",
-    image: "/0L8A7584.jpg",
+    image: "/0L8A7584.webp",
     href: "/shop?category=Kota%20Silk%20Saree",
   },
   {
     name: "Muslin Silk",
-    image: "/0L8A7495.jpg",
+    image: "/0L8A7495.webp",
     href: "/shop?category=Muslin%20Silk%20Sarees",
   },
 ]
