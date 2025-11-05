@@ -1,60 +1,72 @@
-import { Heart, Sparkles, Package } from "lucide-react"
+"use client"
+
+import Image from "next/image"
+import { useEffect, useRef, useState } from "react"
 
 export function ParallaxWhyChooseUs() {
-  const features = [
-    {
-      icon: Package,
-      title: "Artisanal Craftsmanship",
-      description: "Each piece is handcrafted with love and attention to detail, ensuring exceptional quality.",
-    },
-    {
-      icon: Sparkles,
-      title: "Limited Elegance",
-      description: "Exclusive drops for a unique and personal experience that sets you apart.",
-    },
-    {
-      icon: Heart,
-      title: "Curated with Love",
-      description: "Handpicked pieces that reflect our commitment to timeless style and sophistication.",
-    },
-  ]
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <section className="relative">
-      {/* Parallax Background Image - Fixed on desktop, scroll on mobile */}
-      <div
-        className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center bg-top bg-no-repeat bg-cover parallax-bg"
-        style={{
-          backgroundImage: "url('/Untitled-19.webp')",
-        }}
-      >
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+    <section ref={sectionRef} className="relative bg-[#F8F8F8] overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] md:min-h-[500px]">
+        {/* Left Side - Image */}
+        <div className="relative h-[300px] md:h-[350px] lg:h-full order-2 lg:order-1">
+          <Image
+            src="/0L8A7623.webp"
+            alt="Studio Miradia luxury fashion"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="font-serif text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
-              Why Choose Studio Miradia
+        {/* Right Side - Content */}
+        <div className="flex items-center px-4 sm:px-6 md:px-12 lg:px-16 py-20 md:py-28 order-1 lg:order-2">
+          <div className={`max-w-[600px] transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            {/* Main Heading */}
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+              About Us
             </h2>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-              Experience the difference of true luxury and craftsmanship
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="text-center group bg-white/95 backdrop-blur-sm p-8 rounded-lg hover:bg-white transition-all duration-300 hover:scale-105"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#F5E8E0] text-[#8B5A4A] mb-6 group-hover:bg-[#006D77] group-hover:text-white transition-colors">
-                  <feature.icon className="h-8 w-8" />
-                </div>
-                <h3 className="font-serif text-2xl font-semibold mb-3 text-[#8B5A4A]">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
+            {/* History Section */}
+            <div className="mb-8">
+              <h3 className="font-serif text-xl md:text-2xl lg:text-3xl font-bold text-[#1A1A1A] mb-4">
+                History
+              </h3>
+              <p className="text-base md:text-lg text-[#666666] leading-relaxed" style={{ lineHeight: '1.7' }}>
+                At Studio Miradia we specialize in creating exquisite designer sarees. All of our products are made with the highest-grade materials and crafted with impeccable attention to detail, celebrating the beauty, elegance, and grace of women.
+              </p>
+            </div>
+
+            {/* Why Us Section */}
+            <div>
+              <h3 className="font-serif text-xl md:text-2xl lg:text-3xl font-bold text-[#1A1A1A] mb-4">
+                Why Us
+              </h3>
+              <p className="text-base md:text-lg text-[#666666] leading-relaxed" style={{ lineHeight: '1.7' }}>
+                Our founders are visionaries with a deep passion for empowering women through fashion. We integrate traditional Indian motifs with contemporary design, creating pieces tailored to each woman's unique style and personality.
+              </p>
+            </div>
           </div>
         </div>
       </div>

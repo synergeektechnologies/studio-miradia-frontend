@@ -85,7 +85,7 @@ export function Footer() {
 
         {/* Social Media & Copyright */}
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white font-medium">© 2025 Studio MiraDia. All rights reserved.</p>
+          <p className="text-sm text-white font-medium">© 2025 Studio Miradia. All rights reserved.</p>
           <div className="flex gap-4">
             <Link
               href="https://www.instagram.com/studiomiradia/"
