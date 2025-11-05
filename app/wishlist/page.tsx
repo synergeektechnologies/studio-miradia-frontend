@@ -53,7 +53,7 @@ export default function WishlistPage() {
             Save your favorite pieces and create your perfect collection
           </p>
           <Link href="/shop">
-            <Button size="lg" className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-base font-medium">
+            <Button size="lg" className="bg-[#d8a7a7] hover:bg-[#d8a7a7]/90 text-white px-8 py-6 text-base font-medium">
               Discover Our Collection
             </Button>
           </Link>

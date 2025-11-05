@@ -240,7 +240,7 @@ export default function RegisterPage() {
             <CardFooter className="flex flex-col space-y-6 pt-2">
               <Button 
                 type="submit" 
-                className="w-full h-12 bg-black hover:bg-black/90 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 group" 
+                className="w-full h-12 bg-[#d8a7a7] hover:bg-[#d8a7a7]/90 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200 group" 
                 disabled={isLoading}
               >
                 {isLoading ? (

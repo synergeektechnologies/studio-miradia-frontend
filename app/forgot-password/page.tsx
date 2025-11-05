@@ -60,24 +60,12 @@ export default function ForgotPasswordPage() {
 
   if (isEmailSent) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-[#8B5A4A]/5 via-white to-[#8B5A4A]/10 flex items-center justify-center px-4">
+      <div className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-md mx-auto">
-          {/* Heart decoration */}
-          <div className="relative mb-8 text-center">
-            <div className="absolute -top-4 -left-4 text-[#8B5A4A]/20">
-              <Heart className="h-8 w-8 rotate-12" />
-            </div>
-            <div className="absolute -top-2 -right-6 text-[#8B5A4A]/15">
-              <Heart className="h-6 w-6 -rotate-12" />
-            </div>
-            <div className="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">
-              <CheckCircle className="h-10 w-10 text-green-600" />
-            </div>
-          </div>
 
           <Card className="shadow-lg">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl font-serif text-[#8B5A4A]">
+              <CardTitle className="text-2xl font-serif">
                 Check Your Email
               </CardTitle>
               <CardDescription className="text-lg">
@@ -131,24 +119,12 @@ export default function ForgotPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-[#8B5A4A]/5 via-white to-[#8B5A4A]/10 flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-md mx-auto">
-        {/* Heart decoration */}
-        <div className="relative mb-8 text-center">
-          <div className="absolute -top-4 -left-4 text-[#8B5A4A]/20">
-            <Heart className="h-8 w-8 rotate-12" />
-          </div>
-          <div className="absolute -top-2 -right-6 text-[#8B5A4A]/15">
-            <Heart className="h-6 w-6 -rotate-12" />
-          </div>
-          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 text-[#8B5A4A]/10">
-            <Sparkles className="h-4 w-4 rotate-45" />
-          </div>
-        </div>
 
         <Card className="shadow-lg">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-serif text-[#8B5A4A]">
+            <CardTitle className="text-2xl font-serif">
               Forgot Password?
             </CardTitle>
             <CardDescription className="text-lg">
@@ -182,7 +158,7 @@ export default function ForgotPasswordPage() {
 
               <Button 
                 type="submit" 
-                className="w-full bg-[#8B5A4A] hover:bg-[#8B5A4A]/90 text-white"
+                className="w-full bg-[#d8a7a7] hover:bg-[#d8a7a7]/90 text-white"
                 disabled={isLoading}
               >
                 {isLoading ? (

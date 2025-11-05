@@ -55,6 +55,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background with gradient and pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/30" />
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmM2Y0ZjYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-40" />
       
       {/* Floating elements */}
@@ -130,7 +131,7 @@ export default function LoginPage() {
             <CardFooter className="flex flex-col space-y-6 pt-2">
               <Button 
                 type="submit" 
-                className="w-full h-12 text-primary-foreground font-medium shadow-lg hover:shadow-xl transition-all duration-200 group" 
+                className="w-full h-12 text-primary-foreground font-medium shadow-lg hover:shadow-xl transition-all duration-200 group hover:opacity-90" 
                 style={{ backgroundColor: '#d8a7a7' }}
                 disabled={isLoading}
               >

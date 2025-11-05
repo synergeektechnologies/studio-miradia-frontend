@@ -116,7 +116,7 @@ export default function ResetPasswordPage() {
   // Loading state while validating token
   if (isValidToken === null) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-[#8B5A4A]/5 via-white to-[#8B5A4A]/10 flex items-center justify-center px-4">
+      <div className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-md mx-auto text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#8B5A4A] mx-auto mb-4"></div>
           <p className="text-gray-600">Validating reset link...</p>
@@ -128,7 +128,7 @@ export default function ResetPasswordPage() {
   // Invalid token state
   if (isValidToken === false) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-[#8B5A4A]/5 via-white to-[#8B5A4A]/10 flex items-center justify-center px-4">
+      <div className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-md mx-auto">
           {/* Heart decoration */}
           <div className="relative mb-8 text-center">
@@ -145,7 +145,7 @@ export default function ResetPasswordPage() {
 
           <Card className="shadow-lg">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl font-serif text-red-600">
+              <CardTitle className="text-2xl font-serif">
                 Invalid Reset Link
               </CardTitle>
               <CardDescription className="text-lg">
@@ -162,7 +162,7 @@ export default function ResetPasswordPage() {
 
               <div className="space-y-3">
                 <Link href="/forgot-password">
-                  <Button className="w-full bg-[#8B5A4A] hover:bg-[#8B5A4A]/90 text-white">
+                  <Button className="w-full bg-[#d8a7a7] hover:bg-[#d8a7a7]/90 text-white">
                     Request New Reset Link
                   </Button>
                 </Link>
@@ -207,7 +207,7 @@ export default function ResetPasswordPage() {
 
         <Card className="shadow-lg">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-serif text-[#8B5A4A]">
+            <CardTitle className="text-2xl font-serif">
               Reset Your Password
             </CardTitle>
             <CardDescription className="text-lg">
@@ -273,7 +273,7 @@ export default function ResetPasswordPage() {
 
               <Button 
                 type="submit" 
-                className="w-full bg-[#8B5A4A] hover:bg-[#8B5A4A]/90 text-white"
+                className="w-full bg-[#d8a7a7] hover:bg-[#d8a7a7]/90 text-white"
                 disabled={isLoading}
               >
                 {isLoading ? (

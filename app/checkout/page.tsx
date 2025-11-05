@@ -420,7 +420,7 @@ export default function CheckoutPage() {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-[#006D77] hover:bg-[#005761] text-white mb-4"
+                  className="w-full bg-[#d8a7a7] hover:bg-[#d8a7a7]/90 text-white mb-4"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Processing..." : "Proceed to Payment"}
