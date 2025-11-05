@@ -38,9 +38,11 @@ export function CollectionsGrid() {
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={index < 2}
-              quality={95}
+              quality={85}
+              fetchPriority={index < 2 ? "high" : "auto"}
               className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
               loading={index < 2 ? "eager" : "lazy"}
+              unoptimized={false}
             />
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />

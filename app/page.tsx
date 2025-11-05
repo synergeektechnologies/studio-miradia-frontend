@@ -5,6 +5,7 @@ import { NewArrivalsCarousel } from "../components/home/new-arrivals-carousel"
 import { ParallaxWhyChooseUs } from "../components/home/parallax-why-choose-us"
 import { CollectionsGrid } from "../components/home/collections-grid"
 import { ScrollToTop } from "../components/scroll-to-top"
+import { CollectionImagePreloader } from "../components/home/collection-image-preloader"
 import type { Metadata } from "next"
 import { StructuredData } from "../components/structured-data"
 import { collectionPageSchema } from "../lib/structured-data"
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
+      <CollectionImagePreloader />
       <StructuredData data={collectionPageSchema("Featured", "Discover our featured luxury fashion collection")} />
       <HeroSection />
       <FoundersSection />
