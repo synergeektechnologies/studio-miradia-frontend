@@ -66,7 +66,7 @@ export function ProductCard({ product, variant = "default", textColor = "white" 
 
           {/* Minimal Product Info */}
           <div className="mt-3 text-center flex flex-col grow">
-            <h3 className={`font-light text-sm mb-1 min-h-10 overflow-hidden ${textColor === "black" ? "text-black/90" : "text-white/90"}`} style={{
+            <h3 className={`font-bold text-base mb-1 min-h-10 overflow-hidden ${textColor === "black" ? "text-black/90" : "text-white/90"}`} style={{
               display: '-webkit-box',
               WebkitLineClamp: 2,
               WebkitBoxOrient: 'vertical'

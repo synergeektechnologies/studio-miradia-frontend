@@ -26,9 +26,10 @@ export function HeroSection() {
         <p className="text-base md:text-lg text-white/90 mb-3 font-light leading-relaxed max-w-xl">
         Picked with thought and love, just like we do for us.
         </p>
-        {/* <p className="text-sm md:text-base text-white/80 mb-8 font-light leading-relaxed max-w-xl">
-          We are fully sold out on our first collection drop. Our next drop will be coming soon. KEEP A WATCH.
-        </p> */}
+        <p className="text-sm md:text-base text-white/80 mb-8 font-light leading-relaxed max-w-xl">
+          {/* We are fully sold out on our first collection drop. Our next drop will be coming soon. KEEP A WATCH. */}
+          Our New Collection has just dropped. Shop now.
+        </p>
         <Link href="/shop">
           <Button
             size="lg"
